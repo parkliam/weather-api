@@ -59,9 +59,10 @@ const App = () => {
     });
   };
 
+
   const getWeather = async () => {
     const response = await axios.get(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=f9cd232dbbb4ca1f4cf80eb8468af216&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${process.env.REACT_APP_WEATHER_KEY}&units=metric`
     );
 
     setWeatherData(response.data);
@@ -69,12 +70,12 @@ const App = () => {
   };
 
   useEffect(() => {
-    getGeolocation();
+    console.log(process.env.REACT_APP_WEATHER_KEY);
   }, []);
 
   useEffect(() => {
     if (!latitude || !longitude) return;
-
+    
     getWeather();
   }, [latitude, longitude]);
 
