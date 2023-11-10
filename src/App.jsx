@@ -100,4 +100,4 @@ const App = () => {
 
 export default App;
 
-//https://api.openweathermap.org/data/2.5/weather?lat=35.160064&lon=129.1452416&appid=f9cd232dbbb4ca1f4cf80eb8468af216
+//https://api.openweathermap.org/data/2.5/weather?lat=35.160064&lon=129.1452416&appid=cf40a3cfccb68b5a4ce4e48e2a018101
